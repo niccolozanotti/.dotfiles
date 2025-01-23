@@ -1,0 +1,14 @@
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[user]
+	name = Niccolo' Zanotti
+	email = niccolo.zanotti@icloud.com
+[core]
+	compression = 0
+	autocrlf = input
+[alias] 
+  ci = commit
+  ps = push
+       
