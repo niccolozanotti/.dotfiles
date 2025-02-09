@@ -9,6 +9,9 @@ local lspconfig = require("lspconfig")
 -- list of all servers configured.
 lspconfig.servers = {
     "lua_ls",
+    "pyright",
+    "ruff",
+    "fortls",
 }
 
 -- list of servers configured with default config.
@@ -46,5 +49,72 @@ lspconfig.lua_ls.setup({
                 preloadFileSize = 10000,
             },
         },
+    },
+})
+
+lspconfig.pyright.setup({
+    settings = {
+        pyright = {
+            -- Using Ruff's import organizer
+            disableOrganizeImports = true,
+        },
+        python = {
+            analysis = {
+                -- Ignore all files for analysis to exclusively use Ruff for linting
+                ignore = { "*" },
+            },
+        },
+    },
+})
+
+lspconfig.ruff.setup({
+    init_options = {
+        settings = {
+            logLevel = "debug",
+            format = {
+                docstring_code_format = true,
+            },
+            lint = {
+                select = {
+                    "D",
+                    "PL",
+                    "I",
+                    "E",
+                    "W",
+                    "NPY",
+                    "FLY",
+                    "RUF",
+                    "ARG",
+                    "SLF",
+                    "S",
+                    "BLE",
+                    "B",
+                    "A",
+                    "C4",
+                    "EM",
+                    "ICN",
+                    "PIE",
+                    "Q",
+                    "RSE",
+                    "SIM",
+                    "TID",
+                },
+                extend_select = { "D417" },
+                ignore = { "SIM108", "RUF002" },
+                pydocstyle = {
+                    convention = "numpy",
+                },
+            },
+        },
+    },
+})
+
+lspconfig.fortls.setup({
+    cmd = {
+        "fortls",
+        "--lowercase_intrinsics",
+        "--hover_signature",
+        "--hover_language=fortran",
+        "--use_signature_help",
     },
 })

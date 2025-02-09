@@ -1,15 +1,16 @@
 local options = {
     ensure_installed = {
-        "bash",
-        -- "fish",
         "lua",
         "luadoc",
         "markdown",
+        "bash",
         "printf",
-        "toml",
+        "fortran",
+        "python",
         "vim",
         "vimdoc",
         "yaml",
+        "toml",
     },
 
     highlight = {
