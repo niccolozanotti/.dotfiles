@@ -39,7 +39,21 @@ return {
             require("configs.conform")
         end,
     },
-
+    {
+        "epwalsh/obsidian.nvim",
+        event = {
+            "BufReadPre *.md",
+            "BufNewFile *.md",
+        },
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim", -- for search
+            "hrsh7th/nvim-cmp", -- for completion
+        },
+        config = function()
+            require("configs.obsidian")
+        end,
+    },
     {
         "zapling/mason-conform.nvim",
         event = "VeryLazy",

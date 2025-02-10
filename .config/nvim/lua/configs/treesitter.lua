@@ -3,6 +3,7 @@ local options = {
         "lua",
         "luadoc",
         "markdown",
+        "markdown_inline",
         "bash",
         "printf",
         "fortran",
