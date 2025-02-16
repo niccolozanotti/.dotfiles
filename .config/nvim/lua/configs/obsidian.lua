@@ -144,7 +144,13 @@ obsidian.setup({
             note:add_alias(note.title)
         end
 
-        local out = { id = note.id, aliases = note.aliases, tags = note.tags }
+        local out = {
+            id = note.id,
+            title = note.title or "",
+            aliases = note.aliases,
+            tags = note.tags,
+            description = "",
+        }
 
         -- `note.metadata` contains any manually added fields in the frontmatter.
         -- So here we just make sure those fields are kept in the frontmatter.
@@ -163,7 +169,11 @@ obsidian.setup({
         date_format = "%Y-%m-%d",
         time_format = "%H:%M",
         -- A map for custom variables, the key should be the variable and the value a function
-        substitutions = {},
+        substitutions = {
+            yesterday = function()
+                return os.date("%Y-%m-%d", os.time() - 86400)
+            end,
+        },
     },
 
     -- Optional, by default when you use `:ObsidianFollowLink` on a link to an external
