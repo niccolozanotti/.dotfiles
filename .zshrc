@@ -3,13 +3,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
-homebrew=$(brew --prefix)
-
-source "$HOME/.zsh/aliases.zsh"
-source "$HOME/.zsh/exports.zsh"
-source "$HOME/.zsh/functions.zsh"
-
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
@@ -24,19 +17,24 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="false" # or e.g. "%F{yellow}waiting...%f"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy/mm/dd"
-
-
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # plugins=(git)
 
+source "$HOME/.zsh/aliases.zsh"
+source "$HOME/.zsh/exports.zsh"
+source "$HOME/.zsh/functions.zsh"
+
+homebrew=$(brew --prefix)
+
 export EDITOR=$homebrew/bin/nvim
 
 source $homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 
 # Ruby
