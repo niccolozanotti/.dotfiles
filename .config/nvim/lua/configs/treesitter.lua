@@ -1,13 +1,25 @@
 local options = {
     ensure_installed = {
-        "lua",
-        "luadoc",
+        -- Notes
         "markdown",
         "markdown_inline",
+        -- Shell
         "bash",
         "printf",
-        "fortran",
+        -- Web
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        -- Scientific
         "python",
+        "c",
+        "cpp",
+        "fortran",
+        -- Config
+        "lua",
+        "luadoc",
+        "json",
         "vim",
         "vimdoc",
         "yaml",

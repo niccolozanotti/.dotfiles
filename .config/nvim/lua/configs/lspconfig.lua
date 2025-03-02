@@ -20,9 +20,9 @@ local default_servers = {}
 -- lsps with default config
 for _, lsp in ipairs(default_servers) do
     lspconfig[lsp].setup({
-        on_attach = on_attach,
+        on_attach = on_attach, -- NvChads' default keybindings
         on_init = on_init,
-        capabilities = capabilities,
+        capabilities = capabilities, -- Better completion support
     })
 end
 
@@ -43,7 +43,6 @@ lspconfig.lua_ls.setup({
                     vim.fn.expand("$VIMRUNTIME/lua/vim/lsp"),
                     vim.fn.stdpath("data") .. "/lazy/ui/nvchad_types",
                     vim.fn.stdpath("data") .. "/lazy/lazy.nvim/lua/lazy",
-                    -- "${3rd}/love2d/library",
                 },
                 maxPreload = 100000,
                 preloadFileSize = 10000,
@@ -110,6 +109,8 @@ lspconfig.ruff.setup({
 })
 
 lspconfig.fortls.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
     cmd = {
         "fortls",
         "--lowercase_intrinsics",
@@ -117,4 +118,11 @@ lspconfig.fortls.setup({
         "--hover_language=fortran",
         "--use_signature_help",
     },
+    filetypes = { "fortran", "f90", "f95", "f03", "f08" },
+    root_dir = function(fname)
+        local util = require("lspconfig.util")
+        -- Look for .fortls file to determine the root
+        return util.root_pattern(".fortls")(fname) or util.path.dirname(fname)
+    end,
+    single_file_support = true,
 })
