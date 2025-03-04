@@ -1,8 +1,8 @@
-# ---------------- Taps ---------------- #
-tap "homebrew/bundle"
+# Allow homebrew casks
 tap "homebrew/cask"
-tap "teamookla/speedtest"
-# ---------------- Formulae ---------------- #
+
+# GPG
+brew "gnupg"
 
 # ZSH 
 brew "zsh" 
@@ -12,51 +12,63 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
 brew "git"
-brew "neovim"
 
-# Python
+# Languages
 brew "python"
 brew "uv"
-
-brew "node"
 brew "gcc"
 brew "cmake"
-brew "chruby"
 
-brew "latexindent"
-brew "ruby-install"
-
-# ---------------- Casks ---------------- #
-cask "alacritty"
+# Code writing 
+brew "neovim"
+cask "visual-studio-code"
 cask "claude"
-cask "bitwarden"
+
+# Terminal Emulators
+cask "alacritty"
+cask "wezterm"
 
 # Browsers
 cask "brave-browser"
-cask "duckduckgo"
-cask "firefox"
+cask "librewolf" --no-quarantine
 
-cask "espanso"
-
-## LaTex
+## LaTeX
 cask "mactex-no-gui"
-## MEGA
+brew "latexindent"
+
+## Cloud Sync 
 cask "megasync"
 
-# Microsoft apps
-cask "microsoft-auto-update"
+# Work/Videocalls
 cask "microsoft-teams"
-cask "microsoft-word"
+cask "slack"
+cask "zoom"
 
+# VPN
+brew "wireguard"
 cask "nordvpn"
+
+# Note taking
 cask "obsidian"
 cask "quarto"
+# Window tiling managers
 cask "rectangle"
+
+# PDF reader
 cask "skim"
-cask "visual-studio-code"
+
+# Messaging
 cask "whatsapp"
-cask "zoom"
+
+# Academia
 cask "zotero"
 
+# Finance sheet
+cask "microsoft-excel"
+
+# Fonts
 cask "font-jetbrains-mono"
 cask "font-meslo-lg-nerd-font"
+
+# Internet speedtesting
+tap "teamookla/speedtest"
