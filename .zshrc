@@ -17,11 +17,8 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="false" # or e.g. "%F{yellow}waiting...%f"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy/mm/dd"
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# plugins=(git)
+# plugins=(git)  # omz plugins
 
 source "$HOME/.zsh/aliases.zsh"
 source "$HOME/.zsh/exports.zsh"
@@ -36,6 +33,8 @@ source $homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
+# avoid clobbering for safety; override behavior with >|
+set -o noclobber  
 
 # Ruby
 source $homebrew/opt/chruby/share/chruby/chruby.sh
