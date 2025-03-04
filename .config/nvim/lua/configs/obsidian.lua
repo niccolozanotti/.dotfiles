@@ -9,15 +9,26 @@ obsidian.setup({
     -- current markdown file being edited.
     workspaces = {
         {
-            name = "personal",
-            path = "~/vaults/personal",
-        },
-        {
             name = "work",
-            path = "~/vaults/work",
+            path = "~/vaults/iccs",
             -- Optional, override certain settings.
             overrides = {
                 notes_subdir = "notes",
+            },
+        },
+        {
+            -- To allow the use of obsidian-nvim outside of the vault
+            name = "no-vault",
+            path = function()
+                return assert(vim.fs.dirname(vim.api.nvim_buf_get_name(0)))
+            end,
+            overrides = {
+                notes_subdir = vim.NIL,
+                new_notes_location = "current_dir",
+                templates = {
+                    folder = vim.NIL,
+                },
+                disable_frontmatter = true,
             },
         },
     },
@@ -144,13 +155,7 @@ obsidian.setup({
             note:add_alias(note.title)
         end
 
-        local out = {
-            id = note.id,
-            title = note.title or "",
-            aliases = note.aliases,
-            tags = note.tags,
-            description = "",
-        }
+        local out = { id = note.id, aliases = note.aliases, tags = note.tags }
 
         -- `note.metadata` contains any manually added fields in the frontmatter.
         -- So here we just make sure those fields are kept in the frontmatter.
@@ -235,7 +240,7 @@ obsidian.setup({
     -- 1. "current" (the default) - to always open in the current window
     -- 2. "vsplit" - to open in a vertical split if there's not already a vertical split
     -- 3. "hsplit" - to open in a horizontal split if there's not already a horizontal split
-    open_notes_in = "current",
+    open_notes_in = "vsplit",
 
     -- Optional, define your own callbacks to further customize behavior.
     callbacks = {
