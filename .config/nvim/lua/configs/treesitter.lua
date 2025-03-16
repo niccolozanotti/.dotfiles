@@ -16,6 +16,10 @@ local options = {
         "c",
         "cpp",
         "fortran",
+        "cmake",
+        "make",
+        -- Containerization
+        "dockerfile",
         -- Config
         "lua",
         "luadoc",
