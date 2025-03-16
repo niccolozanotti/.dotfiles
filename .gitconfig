@@ -4,11 +4,11 @@
 	prompt = false
 [user]
 	name = Niccolo' Zanotti
-	email = niccolo.zanotti@icloud.com
+    email = niccolo.zanotti@icloud.com
 [core]
 	compression = 0
 	autocrlf = input
 [alias] 
-  ci = commit
-  ps = push
+    ci = commit
+    ps = push
        
