@@ -12,6 +12,7 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
 brew "git"
+brew "lazygit"
 
 # Languages
 brew "python"
