@@ -11,6 +11,7 @@ lspconfig.servers = {
     "lua_ls",
     "pyright",
     "ruff",
+    "clangd",
     "fortls",
 }
 
@@ -65,17 +66,16 @@ lspconfig.pyright.setup({
         },
     },
 })
-
 lspconfig.ruff.setup({
     init_options = {
         settings = {
             logLevel = "debug",
             format = {
-                docstring_code_format = true,
+                docstring_code_format = false, -- Disable docstring formatting
             },
             lint = {
                 select = {
-                    "D",
+                    -- "D", -- Docstring
                     "PL",
                     "I",
                     "E",
@@ -98,14 +98,24 @@ lspconfig.ruff.setup({
                     "SIM",
                     "TID",
                 },
-                extend_select = { "D417" },
+                -- extend_select = { "D417" }, -- docstring rule
                 ignore = { "SIM108", "RUF002" },
-                pydocstyle = {
-                    convention = "numpy",
-                },
+                -- pydocstyle = {
+                --     convention = "numpy",
+                -- },
             },
         },
     },
+})
+
+lspconfig.clangd.setup({
+    on_attach = function(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+        on_attach(client, bufnr)
+    end,
+    on_init = on_init,
+    capabilities = capabilities,
 })
 
 lspconfig.fortls.setup({
