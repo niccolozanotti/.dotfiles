@@ -13,6 +13,7 @@ lspconfig.servers = {
     "ruff",
     "clangd",
     "fortls",
+    "rust_analyzer",
 }
 
 -- list of servers configured with default config.
@@ -135,4 +136,28 @@ lspconfig.fortls.setup({
         return util.root_pattern(".fortls")(fname) or util.path.dirname(fname)
     end,
     single_file_support = true,
+})
+
+lspconfig.rust_analyzer.setup({
+    on_attach = function(client, bufnr)
+        vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+    end,
+    settings = {
+        ["rust-analyzer"] = {
+            imports = {
+                granularity = {
+                    group = "module",
+                },
+                prefix = "self",
+            },
+            cargo = {
+                buildScripts = {
+                    enable = true,
+                },
+            },
+            procMacro = {
+                enable = true,
+            },
+        },
+    },
 })

@@ -18,6 +18,8 @@ local options = {
         "fortran",
         "cmake",
         "make",
+        -- Programming
+        "rust",
         -- Containerization
         "dockerfile",
         -- Config
