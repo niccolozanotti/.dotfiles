@@ -6,12 +6,14 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require("lspconfig")
 
+local util = require("lspconfig.util")
 -- list of all servers configured.
 lspconfig.servers = {
     "lua_ls",
     "pyright",
     "ruff",
     "clangd",
+    "cmake",
     "fortls",
     "rust_analyzer",
 }
@@ -119,6 +121,17 @@ lspconfig.clangd.setup({
     capabilities = capabilities,
 })
 
+lspconfig.cmake.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    cmd = { "cmake-language-server" },
+    filetypes = { "cmake" },
+    single_file_support = true,
+    root_dir = function(fname)
+        return util.root_pattern("CMakePresets.json", "CTestConfig.cmake", ".git", ".github", "build", "cmake")(fname)
+    end,
+})
+
 lspconfig.fortls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
@@ -131,7 +144,6 @@ lspconfig.fortls.setup({
     },
     filetypes = { "fortran", "f90", "f95", "f03", "f08" },
     root_dir = function(fname)
-        local util = require("lspconfig.util")
         -- Look for .fortls file to determine the root
         return util.root_pattern(".fortls")(fname) or util.path.dirname(fname)
     end,
