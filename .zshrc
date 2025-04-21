@@ -7,7 +7,7 @@ export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 zstyle ':omz:update' mode reminder  # update reminder
-zstyle ':omz:update' frequency 13 # days
+zstyle ':omz:update' frequency 14 # days
 
 HYPHEN_INSENSITIVE="false"
 DISABLE_MAGIC_FUNCTIONS="false"
@@ -18,27 +18,21 @@ COMPLETION_WAITING_DOTS="false" # or e.g. "%F{yellow}waiting...%f"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy/mm/dd"
 
-# plugins=(git)  # omz plugins
+export HOMEBREW_ROOT=$(brew --prefix)
 
 source "$HOME/.zsh/aliases.zsh"
 source "$HOME/.zsh/exports.zsh"
 source "$HOME/.zsh/functions.zsh"
 
-homebrew=$(brew --prefix)
+source $HOMEBREW_ROOT/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOMEBREW_ROOT/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source $HOMEBREW_ROOT/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_ROOT/share/powerlevel10k/powerlevel10k.zsh-theme
 
-export EDITOR=$homebrew/bin/nvim
-
-source $homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source $homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+source $SPACK_ROOT/share/spack/setup-env.sh
+. "$HOME/.cargo/env"
 
 # avoid clobbering for safety; override behavior with >|
 set -o noclobber  
-
-# Ruby
-source $homebrew/opt/chruby/share/chruby/chruby.sh
-source $homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.3
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
