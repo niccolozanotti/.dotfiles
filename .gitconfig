@@ -15,3 +15,5 @@
        
 [commit]
 	gpgsign = true
+[gpg]
+	program = /opt/homebrew/bin/gpg
