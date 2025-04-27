@@ -3,8 +3,9 @@
 [difftool]
 	prompt = false
 [user]
-	name = Niccolo' Zanotti
-        email = niccolo.zanotti@icloud.com
+	name = Niccolò Zanotti
+	email = niccolo.zanotti@protonmail.com
+	signingkey = A1A3FF9F508D2CA6
 [core]
 	compression = 0
 	autocrlf = input
@@ -12,3 +13,5 @@
 	ci = commit
 	ps = push
        
+[commit]
+	gpgsign = true

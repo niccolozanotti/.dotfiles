@@ -1,5 +1,8 @@
 #/usr/bin/bash
 
+# gpg signature
+export GPG_TTY=$(tty)
+
 export PATH="$HOME/local/bin:$PATH"
 
 export ICCS=$HOME/rds/hpc-work/iccs
