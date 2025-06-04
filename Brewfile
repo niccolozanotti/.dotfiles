@@ -3,6 +3,7 @@ tap "homebrew/cask"
 
 # GPG
 brew "gnupg"
+brew "pinentry-mac"
 
 # ZSH 
 brew "zsh" 
