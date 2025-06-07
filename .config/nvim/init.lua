@@ -37,5 +37,4 @@ vim.schedule(function()
     require("mappings")
 end)
 
--- linters
--- require("configs.fortitude")
+require("lsps")
