@@ -1,23 +1,45 @@
+# Mirrors as much as possible my WezTerm config (https://github.com/niccolozanotti/.dotfiles/tree/macOS/.config/wezterm/wezterm.lua)
+
+[general]
+# Enable live config reload (equivalent to WezTerm's automatic reload)
+live_config_reload = true
+
+# https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
 [env]
 TERM = "xterm-256color"
 
 [window]
-# padding.x = 5
-# padding.y = 5
-
-# decorations = "Buttonless"
-
-opacity = 0.7
+decorations = "Buttonless"
+opacity = 0.9
 blur = true
-
-option_as_alt = "Both"
+padding.x = 5
+padding.y = 5
 
 [font]
-normal.family = "MesloLGS Nerd Font Mono"
+size = 16
 
-size = 14
+[font.normal]
+family = "MesloLGS Nerd Font Mono"
+style = "Regular"
 
-[general]
-import = [
-    "~/.config/alacritty/themes/themes/coolnight.toml"
+[font.bold]
+family = "MesloLGS Nerd Font Mono"  
+style = "Bold"
+
+[font.italic]
+family = "MesloLGS Nerd Font Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "MesloLGS Nerd Font Mono"
+style = "Bold Italic"
+
+[keyboard]
+bindings = [
+    # Expliciting default Copy/Paste (Ctrl+Shift+C/V
+    { key = "C", mods = "Control|Shift", action = "Copy" },
+    { key = "V", mods = "Control|Shift", action = "Paste" },
+    
 ]

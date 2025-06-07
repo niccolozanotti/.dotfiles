@@ -1,6 +1,3 @@
-# Allow homebrew casks
-tap "homebrew/cask"
-
 # GPG
 brew "gnupg"
 brew "pinentry-mac"
@@ -32,7 +29,7 @@ cask "wezterm"
 
 # Browsers
 cask "brave-browser"
-cask "librewolf" --no-quarantine
+cask "librewolf", args: { "no-quarantine": true }
 
 ## LaTeX
 cask "mactex-no-gui"
@@ -74,3 +71,4 @@ cask "font-meslo-lg-nerd-font"
 
 # Internet speedtesting
 tap "teamookla/speedtest"
+brew "speedtest"
