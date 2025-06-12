@@ -29,8 +29,8 @@ source $HOMEBREW_ROOT/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $HOMEBREW_ROOT/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOMEBREW_ROOT/share/powerlevel10k/powerlevel10k.zsh-theme
 
-source $SPACK_ROOT/share/spack/setup-env.sh
-. "$HOME/.cargo/env"
+# source $SPACK_ROOT/share/spack/setup-env.sh
+# . "$HOME/.cargo/env"
 
 # avoid clobbering for safety; override behavior with >|
 set -o noclobber  
