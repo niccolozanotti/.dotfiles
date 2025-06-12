@@ -7,25 +7,6 @@ return {
         end,
     },
     {
-        "neovim/nvim-lspconfig",
-        event = { "BufReadPre", "BufNewFile" },
-        config = function()
-            -- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvchad/configs/lspconfig.lua
-            require("nvchad.configs.lspconfig").defaults()
-            require("configs.lspconfig")
-        end,
-    },
-
-    {
-        "williamboman/mason-lspconfig.nvim",
-        event = "VeryLazy",
-        dependencies = { "nvim-lspconfig" },
-        config = function()
-            require("configs.mason-lspconfig")
-        end,
-    },
-    {
-        -- https://github.com/mfussenegger/nvim-lint
         "mfussenegger/nvim-lint",
         event = { "BufReadPre", "BufNewFile" },
         config = function()
@@ -63,14 +44,6 @@ return {
         end,
     },
     {
-        "rshkarin/mason-nvim-lint",
-        event = "VeryLazy",
-        dependencies = { "nvim-lint" },
-        config = function()
-            require("configs.mason-lint")
-        end,
-    },
-    {
         "christoomey/vim-tmux-navigator",
         lazy = false,
         cmd = {
@@ -99,6 +72,21 @@ return {
         event = "VeryLazy",
         config = function()
             require("configs.surround")
+        end,
+    },
+    {
+        "quarto-dev/quarto-nvim",
+        event = {
+            "BufReadPre *.qmd",
+            "BufNewFile *.qmd",
+        },
+
+        dependencies = {
+            "jmbuhr/otter.nvim",
+            "nvim-treesitter/nvim-treesitter",
+        },
+        config = function()
+            require("configs.quarto")
         end,
     },
 }
