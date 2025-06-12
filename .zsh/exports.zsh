@@ -5,6 +5,9 @@ else
   export EDITOR='nvim'
 fi
 
+# Update PATH
+export PATH=$PATH:$HOME/nvim/nvim-macos-x86_64/bin
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export SPACK_ROOT=$HOME/spack
 
