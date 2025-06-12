@@ -6,7 +6,9 @@ else
 fi
 
 # Update PATH
-export PATH=$PATH:$HOME/nvim/nvim-macos-x86_64/bin
+export PATH=$PATH:$HOME/nvim/nvim-macos-x86_64/bin #nvim
+export PATH=$PATH:$HOME/.local/bin/env # uv, uvx, etc ...
+export PATH=$PATH:$HOME/ripgrep/ripgrep-14.1.1-x86_64-apple-darwin # ripgrep
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export SPACK_ROOT=$HOME/spack
@@ -21,16 +23,11 @@ export PIP3_HOMEBREW="$HOMEBREW_ROOT/bin/pip3"
 
 # uv-installed Python version paths
 export UV_PYTHON_ROOT="$HOME/.local/share/uv/python"
-export PYTHON3_9="$UV_PYTHON_ROOT/cpython-3.9.21-macos-aarch64-none/bin/python3"
-export PYTHON3_10="$UV_PYTHON_ROOT/cpython-3.10.16-macos-aarch64-none/bin/python3"
-export PYTHON3_11="$UV_PYTHON_ROOT/cpython-3.11.11-macos-aarch64-none/bin/python3"
-export PYTHON3_12="$UV_PYTHON_ROOT/cpython-3.12.9-macos-aarch64-none/bin/python3"
-export PYTHON3_13="$UV_PYTHON_ROOT/cpython-3.13.1-macos-aarch64-none/bin/python3"
-export PIP3_9="$UV_PYTHON_ROOT/cpython-3.9.21-macos-aarch64-none/bin/pip3"
-export PIP3_10="$UV_PYTHON_ROOT/cpython-3.10.16-macos-aarch64-none/bin/pip3"
-export PIP3_11="$UV_PYTHON_ROOT/cpython-3.11.11-macos-aarch64-none/bin/pip3"
-export PIP3_12="$UV_PYTHON_ROOT/cpython-3.12.9-macos-aarch64-none/bin/pip3"
-export PIP3_13="$UV_PYTHON_ROOT/cpython-3.13.1-macos-aarch64-none/bin/pip3"
+export PYTHON3_9="$UV_PYTHON_ROOT/cpython-3.9.23-macos-x86_64-none/bin/python3"
+export PYTHON3_10="$UV_PYTHON_ROOT/cpython-3.10.18-macos-x86_64-none/bin/python3"
+export PYTHON3_11="$UV_PYTHON_ROOT/cpython-3.11.13-macos-x86_64-none/bin/python3"
+export PYTHON3_12="$UV_PYTHON_ROOT/cpython-3.12.11-macos-x86_64-none/bin/python3"
+export PYTHON3_13="$UV_PYTHON_ROOT/cpython-3.13.4-macos-x86_64-none/bin/python3"
 
 # ICCS-related work
 export ICCS="$HOME/Documents/iccs"
