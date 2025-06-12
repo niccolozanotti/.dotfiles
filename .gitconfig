@@ -13,7 +13,7 @@
 	ci = commit
 	ps = push
        
-[commit]
-	gpgsign = true
-[gpg]
-	program = /opt/homebrew/bin/gpg
+; [commit]
+; 	gpgsign = true
+; [gpg]
+; 	program = /opt/homebrew/bin/gpg
