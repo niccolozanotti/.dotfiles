@@ -31,8 +31,7 @@ source $HOMEBREW_ROOT/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # spack.io
 source $SPACK_ROOT/share/spack/setup-env.sh
-# Rust
-. "$HOME/.cargo/env"
+
 # Julia
 export PATH=$PATH:$HOME/.juliaup/bin
 # avoid clobbering for safety; override behavior with >|
