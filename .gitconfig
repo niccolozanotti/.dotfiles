@@ -5,7 +5,7 @@
 [user]
 	name = Niccolò Zanotti
 	email = niccolo.zanotti@protonmail.com
-	signingkey = 48DE83E4CB1636E6
+	signingkey = 60220A4495DE4147
 [core]
 	compression = 0
 	autocrlf = input
