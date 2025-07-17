@@ -20,6 +20,8 @@ brew "cmake"
 
 # Code writing 
 brew "neovim"
+# nvchad dependency
+brew "ripgrep" 
 cask "visual-studio-code"
 cask "claude"
 
@@ -27,13 +29,18 @@ cask "claude"
 cask "alacritty"
 cask "wezterm"
 
+# Terminal multiplexer
+brew "tmux"
+
 # Browsers
 cask "brave-browser"
 cask "librewolf", args: { "no-quarantine": true }
 
+# email
+cask "proton-mail-bridge"
+
 ## LaTeX
 cask "mactex-no-gui"
-brew "latexindent"
 
 ## Cloud Sync 
 cask "megasync"
@@ -44,7 +51,7 @@ cask "slack"
 cask "zoom"
 
 # VPN
-brew "wireguard"
+brew "wireguard-tools"
 cask "nordvpn"
 
 # Note taking
@@ -71,4 +78,3 @@ cask "font-meslo-lg-nerd-font"
 
 # Internet speedtesting
 tap "teamookla/speedtest"
-brew "speedtest"
