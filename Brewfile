@@ -16,6 +16,7 @@ brew "lazygit"
 brew "python"
 brew "uv"
 brew "gcc"
+brew "llvm"
 brew "cmake"
 
 # Code writing 
@@ -24,6 +25,12 @@ brew "neovim"
 brew "ripgrep" 
 cask "visual-studio-code"
 cask "claude"
+
+# Language Servers (used by neovim)
+brew "lua-language-server"
+brew "pyright"
+brew "fortls"
+brew "cmake-language-server"
 
 # Terminal Emulators
 cask "alacritty"
