@@ -6,7 +6,6 @@ vim.lsp.enable({
     "clangd",
     "cmake",
     "fortls",
-    "rust_analyzer",
     "julials",
 })
 
