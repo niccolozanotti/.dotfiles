@@ -1,19 +1,20 @@
 local surround = require("nvim-surround")
 -- full configuration info :h nvim-surround.configuration
+
 surround.setup({
     -- Keymaps for different operations
     keymaps = {
-        insert = "<C-g>s", -- Insert mode: surround current position
-        insert_line = "<C-g>S", -- Insert mode: surround current position with newlines
-        normal = "ys", -- Normal mode: surround with motion
-        normal_cur = "yss", -- Normal mode: surround current line
-        normal_line = "yS", -- Normal mode: surround with motion on new lines
+        insert = "<C-g>s",       -- Insert mode: surround current position
+        insert_line = "<C-g>S",  -- Insert mode: surround current position with newlines
+        normal = "ys",           -- Normal mode: surround with motion
+        normal_cur = "yss",      -- Normal mode: surround current line
+        normal_line = "yS",      -- Normal mode: surround with motion on new lines
         normal_cur_line = "ySS", -- Normal mode: surround current line on new lines
-        visual = "S", -- Visual mode: surround selection
-        visual_line = "gS", -- Visual mode: surround selection with new lines
-        delete = "ds", -- Delete surrounding pair
-        change = "cs", -- Change surrounding pair
-        change_line = "cS", -- Change surrounding pair with newlines
+        visual = "S",            -- Visual mode: surround selection
+        visual_line = "gS",      -- Visual mode: surround selection with new lines
+        delete = "ds",           -- Delete surrounding pair
+        change = "cs",           -- Change surrounding pair
+        change_line = "cS",      -- Change surrounding pair with newlines
     },
 
     -- You can customize surrounds or keep the defaults
