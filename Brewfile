@@ -14,8 +14,10 @@ brew "lazygit"
 
 # Languages
 brew "python"
-brew "uv"
+
+# Compilers
 brew "gcc"
+brew "libomp"
 brew "llvm"
 brew "cmake"
 
@@ -83,5 +85,8 @@ cask "microsoft-excel"
 cask "font-jetbrains-mono"
 cask "font-meslo-lg-nerd-font"
 
-# Internet speedtesting
+# General utilities
+brew "wget"
+brew "fastfetch"
+brew "uv"
 tap "teamookla/speedtest"
