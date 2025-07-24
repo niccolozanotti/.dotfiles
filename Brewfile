@@ -87,6 +87,7 @@ cask "font-meslo-lg-nerd-font"
 
 # General utilities
 brew "wget"
+brew "tree"
 brew "fastfetch"
 brew "uv"
 tap "teamookla/speedtest"
