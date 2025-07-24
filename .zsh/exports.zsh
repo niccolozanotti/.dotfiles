@@ -27,7 +27,7 @@ export PIP3_13="$UV_PYTHON_ROOT/cpython-3.13.1-macos-aarch64-none/bin/pip3"
 
 #useful env variables
 export SOFTWARE="$HOME/software"
-export ICCS="$SOFTWARE/iccs/"
+export ICCS="$SOFTWARE/iccs"
 export FTORCH_PREFIX="$ICCS/libs/bin/FTorchbin/lib/cmake/FTorch/"
 export LIBTORCH_PREFIX="$ICCS/libs/libtorch/share/cmake/Torch/"
 export PFUNIT_PREFIX="$ICCS/libs/pFUnit/build/installed/PFUNIT-4.12/cmake"
