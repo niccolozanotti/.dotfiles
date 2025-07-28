@@ -9,17 +9,22 @@ brew "zsh-autocomplete"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
+# Version Control
 brew "git"
 brew "lazygit"
 
 # Languages
 brew "python"
-
+tap "fortran-lang/homebrew-fortran"
+brew "fpm"
 # Compilers
 brew "gcc"
 brew "libomp"
 brew "llvm"
 brew "cmake"
+
+# Containers
+cask "docker-desktop"
 
 # Code writing 
 brew "neovim"
@@ -45,7 +50,7 @@ brew "tmux"
 cask "brave-browser"
 cask "librewolf", args: { "no-quarantine": true }
 
-# email
+# email client
 cask "proton-mail-bridge"
 
 ## LaTeX
@@ -66,6 +71,7 @@ cask "nordvpn"
 # Note taking
 cask "obsidian"
 cask "quarto"
+
 # Window tiling managers
 cask "rectangle"
 
