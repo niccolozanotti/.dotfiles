@@ -52,6 +52,7 @@ cask "librewolf", args: { "no-quarantine": true }
 
 # email client
 cask "proton-mail-bridge"
+brew "himalaya"
 
 ## LaTeX
 cask "mactex-no-gui"
