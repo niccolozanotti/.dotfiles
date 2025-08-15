@@ -12,7 +12,6 @@
 [alias] 
 	ci = commit
 	ps = push
-       
 [commit]
 	gpgsign = true
 	template = ~/.git_commit_msg
@@ -20,3 +19,8 @@
 	program = /opt/homebrew/bin/gpg
 [init]
 	defaultBranch = main
+[sendemail]
+    smtpserver = smtp.mail.me.com
+	smtpuser = niccolo.zanotti@icloud.com
+	smtpencryption = tls
+	smtpserverport = 587
