@@ -26,10 +26,10 @@ brew "cmake"
 # Containers
 cask "docker-desktop"
 
-# Code writing 
+# neovim & distro deps
 brew "neovim"
-# nvchad dependency
 brew "ripgrep" 
+
 cask "visual-studio-code"
 cask "claude"
 
@@ -53,6 +53,16 @@ cask "librewolf", args: { "no-quarantine": true }
 # email client
 cask "proton-mail-bridge"
 brew "himalaya"
+
+# neomutt & deps
+brew "neomutt"
+brew "isync"
+brew "msmtp"
+brew "pass"
+brew "lynx"
+brew "notmuch"
+brew "abook"
+brew "urlview"
 
 ## LaTeX
 cask "mactex-no-gui"
