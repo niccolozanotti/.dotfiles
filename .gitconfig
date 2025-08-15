@@ -3,9 +3,9 @@
 [difftool]
 	prompt = false
 [user]
-	name = Niccolò Zanotti
-	email = niccolo.zanotti@protonmail.com
-	signingkey = 60220A4495DE4147
+	name = Niccolo' Zanotti
+	email = niccolo.zanotti@icloud.com
+	signingkey = 4A4DE7E346ED08FA
 [core]
 	compression = 0
 	autocrlf = input
