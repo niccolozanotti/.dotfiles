@@ -15,6 +15,7 @@
        
 [commit]
 	gpgsign = true
+	template = ~/.git_commit_msg
 [gpg]
 	program = /opt/homebrew/bin/gpg
 [init]

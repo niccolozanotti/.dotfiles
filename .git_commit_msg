@@ -1,0 +1,27 @@
+# TITLE: Summary, imperative, start upper case, don't end with a period
+# No more than 50 chars. #### 50 chars is here:  #
+
+# Remember blank line between title and body.
+
+# BODY: Explain *what* and *why* (not *how*). Reference TODO id/issue.
+# Wrap at 72 chars. ################################## which is here:  #
+
+# TRAILERS (uncomment and fill as needed):
+# Fixes: https://todo.sr.ht/~niccolozanotti/repo/N
+# Closes: https://todo.sr.ht/~niccolozanotti/repo/N
+# References: https://todo.sr.ht/~niccolozanotti/repo/N
+# Signed-off-by: Niccolo' Zanotti <niccolo.zanotti@icloud.com>
+# Reviewed-by: Name <email@example.com>
+# Tested-by: Name <email@example.com>
+#
+# How to Write a Git Commit Message:
+# https://chris.beams.io/posts/git-commit/
+#
+# 1. Separate subject from body with a blank line
+# 2. Limit the subject line to 50 characters
+# 3. Capitalize the subject line
+# 4. Do not end the subject line with a period
+# 5. Use the imperative mood in the subject line
+#    "If applied, this commit will *your subject line here*"
+# 6. Wrap the body at 72 characters
+# 7. Use the body to explain what and why vs. how
