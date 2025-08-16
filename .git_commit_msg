@@ -10,9 +10,9 @@
 # Fixes: https://todo.sr.ht/~niccolozanotti/repo/N
 # Closes: https://todo.sr.ht/~niccolozanotti/repo/N
 # References: https://todo.sr.ht/~niccolozanotti/repo/N
-# Signed-off-by: Niccolo' Zanotti <niccolo.zanotti@icloud.com>
-# Reviewed-by: Name <email@example.com>
-# Tested-by: Name <email@example.com>
+# Signed-off-by: Niccolo' Zanotti <contact@niccolozanotti.com>
+# Reviewed-by: Niccolo' Zanotti <contact@niccolozanotti.com>
+# Tested-by: Niccolo' Zanotti <contact@niccolozanotti.com>
 #
 # How to Write a Git Commit Message:
 # https://chris.beams.io/posts/git-commit/

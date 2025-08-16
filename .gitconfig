@@ -4,8 +4,8 @@
 	prompt = false
 [user]
 	name = Niccolo' Zanotti
-	email = niccolo.zanotti@icloud.com
-	signingkey = 4A4DE7E346ED08FA
+	email = contact@niccolozanotti.com
+	signingkey = 9FCFC7FBA9136976
 [core]
 	compression = 0
 	autocrlf = input
@@ -20,7 +20,9 @@
 [init]
 	defaultBranch = main
 [sendemail]
-    smtpserver = smtp.mail.me.com
-	smtpuser = niccolo.zanotti@icloud.com
+	smtpserver = localhost
+	smtpuser = niccolo.zanotti@protonmail.com
 	smtpencryption = tls
-	smtpserverport = 587
+    	smtpserverport = 1025
+    	smtpsslcertpath = 
+    	confirm = auto
