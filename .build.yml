@@ -1,0 +1,18 @@
+image: alpine/latest
+packages:
+  - git
+  - openssh
+secrets:
+  - 077018c4-a3fa-47cf-9fca-7ac41a15839b
+environment:
+  # in case the repos have different names
+  srht_repo: .dotfiles
+  github_repo: .dotfiles
+  github: git@github.com:niccolozanotti
+tasks:
+  # ssh-keyscan is required, command fails otherwise!
+  - mirror: |
+      ssh-keyscan github.com >> ~/.ssh/known_hosts
+      cd "$srht_repo"
+      git remote add github "$github/$github_repo.git"
+      git push --mirror github
