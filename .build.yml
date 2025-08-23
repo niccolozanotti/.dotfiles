@@ -1,0 +1,25 @@
+# Mirror sr.ht repo to github.com
+image: alpine/latest
+packages:
+  - git
+  - openssh
+secrets:
+  - 077018c4-a3fa-47cf-9fca-7ac41a15839b
+environment:
+  srht_repo: .dotfiles
+  github_repo: .dotfiles
+  github: git@github.com:niccolozanotti
+tasks:
+  # ssh-keyscan is required, otherwise fails
+  - mirror: |
+      ssh-keyscan github.com >> ~/.ssh/known_hosts
+      cd "$srht_repo"
+      git remote add github "$github/$github_repo.git"
+      # Fetch all branches
+      git fetch origin
+      # Create local branches for all remote branches
+      for branch in $(git branch -r | grep -v HEAD | sed 's/origin\///'); do
+        git checkout -b "$branch" "origin/$branch" || git checkout "$branch"
+      done
+      git push github --all --force
+      git push github --tags --force
