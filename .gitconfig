@@ -1,0 +1,29 @@
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[user]
+	name = Niccolo' Zanotti
+	email = contact@niccolozanotti.com
+	signingkey = 9FCFC7FBA9136976
+[core]
+	compression = 0
+	autocrlf = input
+	editor = nvim
+[alias] 
+	ci = commit
+	ps = push
+[commit]
+	gpgsign = true
+	template = ~/.git_commit_msg
+[gpg]
+	program = gpg
+[init]
+	defaultBranch = main
+[sendemail]
+	smtpserver = localhost
+	smtpuser = niccolo.zanotti@protonmail.com
+	smtpencryption = tls
+    	smtpserverport = 1025
+    	smtpsslcertpath = 
+    	confirm = auto
