@@ -4,10 +4,10 @@ brew "pinentry-mac"
 
 # ZSH 
 brew "zsh" 
-brew "powerlevel10k"
 brew "zsh-autocomplete"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
+brew "starship"
 
 # Version Control
 brew "git"

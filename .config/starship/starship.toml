@@ -1,0 +1,269 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$python\
+$quarto\
+$spack\
+$nix_shell\
+$cmake\
+$c\
+$cpp\
+$lua\
+$zig\
+$rust\
+$package\
+$docker_context\
+$jobs\
+$cmd_duration\
+$line_break\
+$character"""
+
+palette = 'custom'
+
+[palettes.custom]
+dark_blue='#61afef'
+blue = '#81A1C1'
+teal = '#88C0D0'
+red = '#BF616A'
+orange = '#D08770'
+green = '#A3BE8C'
+yellow = '#EBCB8B'
+purple = '#B48EAD'
+gray = '#434C5E'
+black = '#2E3440'
+white='#D8DEE9' 
+
+# Module config
+[fill]
+symbol = ' '
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[bun]
+symbol = " "
+
+[c]
+symbol = " "
+
+[cpp]
+symbol = ""
+
+# Once https://github.com/starship/starship/pull/6685 gets merged
+# [fortran]
+# symbol = ""
+
+[cmake]
+symbol = ""
+
+[cmd_duration]
+min_time = 500
+style = 'fg:gray'
+format = '[$duration]($style)'
+
+[conda]
+symbol = " "
+
+[crystal]
+symbol = ""
+
+[dart]
+symbol = ""
+
+[deno]
+symbol = ""
+
+[directory]
+style = 'bold fg:dark_blue'
+format = '[$path ]($style)'
+truncation_length = 3
+truncation_symbol = '…/'
+truncate_to_repo = false
+read_only = " 󰌾"
+
+[directory.substitutions]
+'Documents' = '󰈙'
+'Downloads' = ' '
+'Music' = ' '
+'Pictures' = ' '
+'github.com' = ' '
+'gitlab.com' = ' '
+'sr.ht' = ' '
+
+[docker_context]
+symbol = " "
+style = 'fg:#06969A'
+format = '[$symbol]($style) $path'
+detect_files = ['docker-compose.yml', 'docker-compose.yaml', 'Dockerfile']
+detect_extensions = ['Dockerfile']
+
+[elixir]
+symbol = ""
+
+[elm]
+symbol = ""
+
+[fennel]
+symbol = ""
+
+[fossil_branch]
+symbol = ""
+
+[gcloud]
+symbol = " "
+
+[git_branch]
+style = 'fg:green'
+symbol = ' '
+format = '[on](white) [$symbol$branch ]($style)'
+
+[git_commit]
+tag_symbol = '  '
+
+[git_status]
+style = 'fg:green'
+format = '([$all_status$ahead_behind]($style) )'
+ 
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[jobs]
+symbol = ' '
+style = 'red'
+number_threshold = 1
+format = '[$symbol]($style)'
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[ocaml]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+disabled = true
+
+[perl]
+symbol = " "
+
+[python]
+style = "teal"
+symbol = " "
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+pyenv_version_name = true
+pyenv_prefix = ''
+
+[quarto]
+style = "teal"
+format = '[$symbol($version )]($style)'
+version_format = "v${major}.${minor}"
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = "󱘗 "
+
+[scala]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[zig]
+style = "yellow"
+symbol = " "
+format = '[$symbol($version )]($style)'
+version_format = "v${major}.${minor}"
+detect_extensions = ['zig', 'zon']

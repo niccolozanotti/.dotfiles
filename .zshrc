@@ -1,25 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-export ZSH="$HOME/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
-
-zstyle ':omz:update' mode reminder  # update reminder
-zstyle ':omz:update' frequency 14 # days
-
-HYPHEN_INSENSITIVE="false"
-DISABLE_MAGIC_FUNCTIONS="false"
-DISABLE_LS_COLORS="false"
-DISABLE_AUTO_TITLE="true"
-ENABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="false" # or e.g. "%F{yellow}waiting...%f"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-HIST_STAMPS="yyyy/mm/dd"
-
-export HOMEBREW_ROOT=$(brew --prefix)
-
+# Useful defs
 source "$HOME/.zsh/aliases.zsh"
 source "$HOME/.zsh/exports.zsh"
 source "$HOME/.zsh/functions.zsh"
@@ -45,4 +24,7 @@ export PATH=$PATH:$HOME/.juliaup/bin
 # avoid clobbering for safety; override behavior with >|
 set -o noclobber  
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# starship.rs setup using zsh shell
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+export STARSHIP_CACHE="$HOME/.starship/cache"
+eval "$(starship init zsh)"
