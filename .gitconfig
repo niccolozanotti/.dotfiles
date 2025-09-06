@@ -9,6 +9,7 @@
 [core]
 	compression = 0
 	autocrlf = input
+	editor = nvim
 [alias] 
 	ci = commit
 	ps = push
@@ -16,7 +17,7 @@
 	gpgsign = true
 	template = ~/.git_commit_msg
 [gpg]
-	program = /opt/homebrew/bin/gpg
+	program = gpg
 [init]
 	defaultBranch = main
 [sendemail]

@@ -7,16 +7,19 @@
 # Wrap at 72 chars. ################################## which is here:  #
 
 # TRAILERS (uncomment and fill as needed):
-# Fixes: https://todo.sr.ht/~niccolozanotti/repo/N
-# Closes: https://todo.sr.ht/~niccolozanotti/repo/N
-# References: https://todo.sr.ht/~niccolozanotti/repo/N
+# sr.ht recognized trailers:
+
+# Fixes: https://todo.sr.ht/~niccolozanotti/project/N
+# Implements : https://todo.sr.ht/~niccolozanotti/project/N
+# References: https://todo.sr.ht/~niccolozanotti/project/N
+# Closes: https://todo.sr.ht/~niccolozanotti/project/N
+#
 # Signed-off-by: Niccolo' Zanotti <contact@niccolozanotti.com>
 # Reviewed-by: Niccolo' Zanotti <contact@niccolozanotti.com>
 # Tested-by: Niccolo' Zanotti <contact@niccolozanotti.com>
 #
-# How to Write a Git Commit Message:
+# Good practices for writing a commit:
 # https://chris.beams.io/posts/git-commit/
-#
 # 1. Separate subject from body with a blank line
 # 2. Limit the subject line to 50 characters
 # 3. Capitalize the subject line
