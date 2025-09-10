@@ -1,8 +1,11 @@
+# This is not used any more since homebrew is managed by nix via https://github.com/zhaofengli/nix-homebrew
+# Formulae, casks and taps here:
+# https://git.sr.ht/~niccolozanotti/nix-darwin/tree/main/item/modules/homebrew.nix
 # GPG
 brew "gnupg"
 brew "pinentry-mac"
 
-# ZSH 
+# ZSH/starship 
 brew "zsh" 
 brew "zsh-autocomplete"
 brew "zsh-autosuggestions"
@@ -17,11 +20,15 @@ brew "lazygit"
 brew "python"
 tap "fortran-lang/homebrew-fortran"
 brew "fpm"
+
 # Compilers
+brew "cmake"
 brew "gcc"
+brew 'mpich' , args: ['cc=gcc-15', 'build-from-source', 'verbose']
+brew 'opencoarrays', args: ['cc=gcc-15', 'build-from-source', 'verbose']
+brew "gfortran"
 brew "libomp"
 brew "llvm"
-brew "cmake"
 
 # Containers
 cask "docker-desktop"
@@ -49,10 +56,11 @@ brew "tmux"
 # Browsers
 cask "brave-browser"
 cask "librewolf", args: { "no-quarantine": true }
+brew "tor"
 
 # email client
 cask "proton-mail-bridge"
-brew "himalaya"
+cask "thunderbird"
 
 # neomutt & deps
 brew "neomutt"
@@ -102,9 +110,14 @@ cask "microsoft-excel"
 cask "font-jetbrains-mono"
 cask "font-meslo-lg-nerd-font"
 
+# LLMs
+brew "ollama"
+
 # General utilities
+brew "scc"
 brew "wget"
 brew "tree"
 brew "fastfetch"
 brew "uv"
+brew "mactop"
 tap "teamookla/speedtest"
