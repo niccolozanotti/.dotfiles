@@ -1,0 +1,20 @@
+# Cross Desktop Group specification
+# https://specifications.freedesktop.org/basedir-spec/latest/
+# export XDG_CONFIG_HOME="$HOME/.config"
+
+# LLVM OpenMP installed via libomp brew formula
+export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
+
+
+export SOFTWARE="$HOME/software"
+export GITHUB="$SOFTWARE/github.com"
+export GITLAB="$SOFTWARE/gitlab.com"
+export SOURCEHUT="$SOFTWARE/sr.ht"
+export ICCS="$SOFTWARE/iccs"
+export FTORCH_PREFIX="$ICCS/libs/bin/FTorchbin/lib/cmake/FTorch"
+export LIBTORCH_PREFIX="$ICCS/libs/libtorch/share/cmake/Torch"
+export PFUNIT_PREFIX="$ICCS/libs/pFUnit/build/installed/PFUNIT-4.12/cmake"
+
+# university files
+export IPCV=MEGA/UNI/IPCV

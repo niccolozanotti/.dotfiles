@@ -1,30 +1,59 @@
-# Useful defs
-source "$HOME/.zsh/aliases.zsh"
-source "$HOME/.zsh/exports.zsh"
-source "$HOME/.zsh/functions.zsh"
+# .zshrc -- Interactive zsh shell config file
+# This is used in a nix-managed system with the following shell configuration
+# running shell init commands, defining extra env variables, etc...
+# https://git.sr.ht/~niccolozanotti/nix-darwin/tree/main/item/modules/shells.nix
 
-source $HOMEBREW_ROOT/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOMEBREW_ROOT/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source $HOMEBREW_ROOT/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOMEBREW_ROOT/share/powerlevel10k/powerlevel10k.zsh-theme
+# Tryna be not too messy
+source $HOME/.zsh/zsh_alias
+source $HOME/.zsh/zsh_env
+source $HOME/.zsh/zsh_funcs
 
-# Cross Desktop Group specification
-# https://specifications.freedesktop.org/basedir-spec/latest/
-export XDG_CONFIG_HOME="$HOME/.config"
+# zsh options
+ENABLE_CORRECTION="false"
+HIST_STAMPS="yyyy/mm/dd"
+export CLICOLOR=1
+export LS_COLORS="exfxcxdxbxegedabagacadah" #default for ls
 
-# spack.io
-export SPACK_ROOT="$HOME/spack"
+############# Shell customization #############
+# Enable bash completion
+autoload -U +X bashcompinit && bashcompinit
+autoload -U +X compinit && compinit
+
+fpath=($HOME/completion_zsh $fpath)
+
+# These are set by nix-darwin at shell init
+source $ZSH_SYNTAX_HIGHLIGHTING_ROOT/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH_AUTOSUGGESTIONS_ROOT/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH_FZF_TAB_ROOT/share/fzf-tab/fzf-tab.zsh
+
+# starship.rs setup using zsh shell
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+export STARSHIP_CACHE=$HOME/.starship/cache
+eval "$(starship init zsh)"
+
+# This is commented since this is enabled at the nix flake level
+# source <(fzf --zsh)
+
+############ Package managers #############
+# This is commented since this is enabled at the nix flake level
+# eval "$(brew shellenv)"
+export SPACK_ROOT=$HOME/spack
 source $SPACK_ROOT/share/spack/setup-env.sh
-# brew.sh
-eval "$(brew shellenv)"
 
-# Julia
-export PATH=$PATH:$HOME/.juliaup/bin
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+
+#GPG
+export GPG_TTY=$(tty)
 
 # avoid clobbering for safety; override behavior with >|
 set -o noclobber  
 
-# starship.rs setup using zsh shell
-export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
-export STARSHIP_CACHE="$HOME/.starship/cache"
-eval "$(starship init zsh)"
+############## PATH #############
+PATH=$HOME/go/bin:$PATH
+export PATH

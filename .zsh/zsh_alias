@@ -1,0 +1,30 @@
+# Note: For a full list of active aliases, interactively run alias
+
+# Utilities
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# dotfiles (bare repo)
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias lazydotfiles='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# tmux
+alias attach='tmux attach -t'
+alias detach='tmux detach'
+alias tmux-reload='tmux source ~/.config/tmux/tmux.conf'
+
+# machine info
+alias mactop='sudo mactop'
+
+# nix
+alias nixdarwin-rebuild='sudo darwin-rebuild switch --flake /etc/nix-darwin#macbook-pro14'
+alias nixedit='cd /etc/nix-darwin/ && nvim flake.nix'
+
+# starship
+alias starshipedit='nvim ~/.config/starship/starship.toml'
+
+# neovim
+alias nvimedit='cd ~/.config/nvim && nvim'
+
+alias fpm='fortran-fpm' #fortran-fpm binary from nix pkg
+
