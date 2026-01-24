@@ -3,6 +3,7 @@ return {
 
     -- omit the following line if `zls` is in your PATH
     cmd = { 'zls' },
+		filetypes = { 'zig' },
     -- There are two ways to set config options:
     --   - edit your `zls.json` that applies to any editor that uses ZLS
     --   - set in-editor config options with the `settings` field below.
