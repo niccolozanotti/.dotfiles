@@ -11,10 +11,13 @@ export SOFTWARE="$HOME/software"
 export GITHUB="$SOFTWARE/github.com"
 export GITLAB="$SOFTWARE/gitlab.com"
 export SOURCEHUT="$SOFTWARE/sr.ht"
+export CODEBERG="$SOFTWARE/codeberg.org"
+export FORGEJO="$SOFTWARE/forgejo"
 export ICCS="$SOFTWARE/iccs"
 export FTORCH_PREFIX="$ICCS/libs/bin/FTorchbin/lib/cmake/FTorch"
 export LIBTORCH_PREFIX="$ICCS/libs/libtorch/share/cmake/Torch"
 export PFUNIT_PREFIX="$ICCS/libs/pFUnit/build/installed/PFUNIT-4.12/cmake"
 
-# university files
-export IPCV=MEGA/UNI/IPCV
+export ARDUINO_LIBS="$HOME/Documents/Arduino/libraries"
+
+export HF_TOKEN="$(pass show huggingface/token-read)"

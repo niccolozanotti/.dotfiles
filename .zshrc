@@ -4,9 +4,9 @@
 # https://git.sr.ht/~niccolozanotti/nix-darwin/tree/main/item/modules/shells.nix
 
 # Tryna be not too messy
-source $HOME/.zsh/zsh_alias
-source $HOME/.zsh/zsh_env
-source $HOME/.zsh/zsh_funcs
+source $HOME/.zsh/alias
+source $HOME/.zsh/env
+source $HOME/.zsh/funcs
 
 # zsh options
 ENABLE_CORRECTION="false"

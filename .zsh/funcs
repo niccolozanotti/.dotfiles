@@ -1,8 +1,7 @@
 ################ UTILITIES ###############
-cdls()
-{
-    cd "$@" && ls;
-}
+cdls() { cd "$@" && ls; }
+
+skimopen(){ open "$@" -a skim; }
 
 wgconnect()
 # Wireguard homevpn server
@@ -20,7 +19,7 @@ wgstatus() {
     sudo wg show
 }
 
-translate()
+en-it()
 {
   # Initialize an empty string to hold the concatenated result
   input_string=""
@@ -39,7 +38,7 @@ translate()
   open "https://www.wordreference.com/enit/$input_string"
 }
 
-traduci()
+it-en()
 {
   # Initialize an empty string to hold the concatenated result
   input_string=""
@@ -56,4 +55,42 @@ traduci()
   done
   # Lookup the corresponding address on wordreference.com
   open "https://www.wordreference.com/iten/$input_string"
+}
+
+fr-en()
+{
+  # Initialize an empty string to hold the concatenated result
+  input_string=""
+  # Loop through all the arguments
+  for arg in "$@"
+  do
+      #  empty input_string
+      if [ -z "$input_string" ]; then
+          input_string="$arg"
+      else
+          # %20 for url whitespace
+          input_string="$input_string%20$arg"
+      fi
+  done
+  # Looking the corresponding address on wordreference.com
+  open "https://www.wordreference.com/fren/$input_string"
+}
+
+en-fr()
+{
+  # Initialize an empty string to hold the concatenated result
+  input_string=""
+  # Loop through all the arguments
+  for arg in "$@"
+  do
+      #  empty input_string
+      if [ -z "$input_string" ]; then
+          input_string="$arg"
+      else
+          # %20 for url whitespace
+          input_string="$input_string%20$arg"
+      fi
+  done
+  # Looking the corresponding address on wordreference.com
+  open "https://www.wordreference.com/enfr/$input_string"
 }

@@ -1,6 +1,7 @@
 # Note: For a full list of active aliases, interactively run alias
 
 # Utilities
+alias fman='compgen -c | fzf | xargs -o man'
 alias ..='cd ..'
 alias ...='cd ../..'
 
@@ -11,6 +12,7 @@ alias lazydotfiles='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # tmux
 alias attach='tmux attach -t'
 alias detach='tmux detach'
+alias tmux-edit='nvim ~/.config/tmux/tmux.conf'
 alias tmux-reload='tmux source ~/.config/tmux/tmux.conf'
 
 # machine info
@@ -26,5 +28,5 @@ alias starshipedit='nvim ~/.config/starship/starship.toml'
 # neovim
 alias nvimedit='cd ~/.config/nvim && nvim'
 
-alias fpm='fortran-fpm' #fortran-fpm binary from nix pkg
-
+# arduino
+alias arduino='arduino-cli'
