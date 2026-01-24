@@ -6,12 +6,13 @@ $git_status\
 $fill\
 $os\
 $python\
+$rlang\
 $quarto\
 $spack\
 $nix_shell\
 $c\
-$zig\
 $cpp\
+$zig\
 $lua\
 $rust\
 $cmake\
@@ -53,7 +54,7 @@ symbol = " "
 [c]
 symbol = " "
 style = 'blue'
-format = '[$symbol($name(-$version))]($style)'
+format = '[$symbol($name($version))]($style)'
 version_format = "${major}.${minor}"
 
 [cpp]
@@ -112,7 +113,7 @@ detect_extensions = ['Dockerfile']
 [elixir]
 symbol = ""
 
-# Once https://github.com/starship/starship/pull/6685 gets merged
+# From starship v1.24 onwards
 # [fortran]
 # symbol = ""
  
@@ -273,5 +274,5 @@ symbol = " "
 style = "yellow"
 symbol = " "
 format = '[$symbol($version )]($style)'
-version_format = "${major}.${minor}"
+version_format = "${major}.${minor}.${patch}"
 detect_extensions = ['zig', 'zon']
