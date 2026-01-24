@@ -1,7 +1,6 @@
-# Mirrors as much as possible my WezTerm config (https://github.com/niccolozanotti/.dotfiles/tree/macOS/.config/wezterm/wezterm.lua)
+# Mirrors as much as possible my WezTerm config (at ~/.config/wezterm/wezterm.lua)
 
 [general]
-# Enable live config reload (equivalent to WezTerm's automatic reload)
 live_config_reload = true
 
 # https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
@@ -21,19 +20,19 @@ padding.y = 5
 size = 16
 
 [font.normal]
-family = "MesloLGS Nerd Font Mono"
+family = "FiraCode Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "MesloLGS Nerd Font Mono"  
+family = "FiraCode Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "MesloLGS Nerd Font Mono"
+family = "FiraCode Nerd Font"
 style = "Italic"
 
 [font.bold_italic]
-family = "MesloLGS Nerd Font Mono"
+family = "FiraCode Nerd Font"
 style = "Bold Italic"
 
 [keyboard]
