@@ -26,8 +26,11 @@ source $ZSH_SYNTAX_HIGHLIGHTING_ROOT/share/zsh-syntax-highlighting/zsh-syntax-hi
 source $ZSH_AUTOSUGGESTIONS_ROOT/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH_FZF_TAB_ROOT/share/fzf-tab/fzf-tab.zsh
 
+# https://specifications.freedesktop.org/basedir/latest/
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # starship.rs setup using zsh shell
-export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/starship.toml
 export STARSHIP_CACHE=$HOME/.starship/cache
 eval "$(starship init zsh)"
 
