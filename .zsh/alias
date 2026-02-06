@@ -30,3 +30,6 @@ alias nvimedit='cd ~/.config/nvim && nvim'
 
 # arduino
 alias arduino='arduino-cli'
+
+# whatsapp
+alias whatsapp='librewolf --new-window https://web.whatsapp.com'
