@@ -1,12 +1,15 @@
 # Cross Desktop Group specification
 # https://specifications.freedesktop.org/basedir-spec/latest/
-# export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CONFIG_HOME="$HOME/.config"
+
+# https://github.com/nix-darwin/nix-darwin
+export NIX_DARWIN_PATH="$HOME/nix-darwin"
 
 # LLVM OpenMP installed via libomp brew formula
 export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
 
-
+# Useful paths
 export SOFTWARE="$HOME/software"
 export GITHUB="$SOFTWARE/github.com"
 export GITLAB="$SOFTWARE/gitlab.com"
@@ -17,7 +20,4 @@ export ICCS="$SOFTWARE/iccs"
 export FTORCH_PREFIX="$ICCS/libs/bin/FTorchbin/lib/cmake/FTorch"
 export LIBTORCH_PREFIX="$ICCS/libs/libtorch/share/cmake/Torch"
 export PFUNIT_PREFIX="$ICCS/libs/pFUnit/build/installed/PFUNIT-4.12/cmake"
-
 export ARDUINO_LIBS="$HOME/Documents/Arduino/libraries"
-
-export HF_TOKEN="$(pass show huggingface/token-read)"

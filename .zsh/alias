@@ -19,8 +19,8 @@ alias tmux-reload='tmux source ~/.config/tmux/tmux.conf'
 alias mactop='sudo mactop'
 
 # nix
-alias nixdarwin-rebuild='sudo darwin-rebuild switch --flake /etc/nix-darwin#macbook-pro14'
-alias nixedit='cd /etc/nix-darwin/ && nvim flake.nix'
+alias nixdarwin-rebuild='sudo darwin-rebuild switch --flake $NIX_DARWIN_PATH#macbook-pro14'
+alias nixedit='cd $NIX_DARWIN_PATH && nvim flake.nix'
 
 # starship
 alias starshipedit='nvim ~/.config/starship/starship.toml'
