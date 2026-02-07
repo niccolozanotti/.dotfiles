@@ -47,8 +47,6 @@ type starship_zle-keymap-select >/dev/null || \
 ############ Package managers #############
 # This is commented since this is enabled at the nix flake level
 # eval "$(brew shellenv)"
-export SPACK_ROOT=$HOME/spack
-source $SPACK_ROOT/share/spack/setup-env.sh
 
 
 # Preferred editor for local and remote sessions
