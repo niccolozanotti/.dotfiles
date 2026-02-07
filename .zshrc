@@ -64,7 +64,7 @@ set -o noclobber
 
 ############## PATH #############
 PATH=$HOME/go/bin:$PATH
-PATH=$HOME/nvim-v0.12/bin:$PATH # nightly build
+PATH=$HOME/ext/nvim-macos-arm64/bin:$PATH # nightly build
 
 export PATH
 
