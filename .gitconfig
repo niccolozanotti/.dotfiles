@@ -1,23 +1,23 @@
 [diff]
-	tool = vimdiff
+  tool = vimdiff
 [difftool]
-	prompt = false
+  prompt = false
 [user]
-	name = Niccolo' Zanotti
-	email = contact@niccolozanotti.com
-	signingkey = 9FCFC7FBA9136976
+  name = Niccolo' Zanotti
+  email = contact@niccolozanotti.com
+  signingkey = 9FCFC7FBA9136976
 [core]
-	compression = 0
-	autocrlf = input
-	editor = nvim
+  compression = 0
+  autocrlf = input
+  editor = nvim
 [alias] 
-	ci = commit
-	ps = push
+  ci = commit
+  ps = push
 [commit]
-	gpgsign = true
-	template = ~/.git_commit_msg
+  gpgsign = true
+  template = ~/.git_commit_msg
 [gpg]
-	program = gpg
+  program = gpg
 [init]
   defaultBranch = main
 [sendemail]
